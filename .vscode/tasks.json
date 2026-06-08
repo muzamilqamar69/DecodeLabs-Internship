@@ -1,0 +1,159 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Verify Node availability",
+			"type": "shell",
+			"command": "node --version || echo NODE_NOT_FOUND",
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Verify Node availability",
+			"type": "shell",
+			"command": "cmd /c \"node --version || echo NODE_NOT_FOUND\"",
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Check Node",
+			"type": "shell",
+			"command": "powershell -NoProfile -Command \"try { node --version } catch { Write-Output 'NODE_NOT_FOUND' }\"",
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Check Node",
+			"type": "shell",
+			"command": "powershell -NoProfile -Command \"& { try { node --version } catch { Write-Output 'NODE_NOT_FOUND' } }\"",
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Task Shell Test",
+			"type": "shell",
+			"command": "Write-Output 'HELLO'",
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Node Version Check",
+			"type": "shell",
+			"command": "node --version",
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Winget Version",
+			"type": "shell",
+			"command": "winget --version",
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Install Node",
+			"type": "shell",
+			"command": "winget install --id OpenJS.NodeJS.LTS -e --source winget --accept-source-agreements --accept-package-agreements --silent",
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Install Dependencies",
+			"type": "shell",
+			"command": "npm install",
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Check Node and NPM Path",
+			"type": "shell",
+			"command": "node --version; where.exe npm || echo NPM_NOT_FOUND; where.exe node",
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Check Node and NPM Path",
+			"type": "shell",
+			"command": "node --version; if (Get-Command npm -ErrorAction SilentlyContinue) { Get-Command npm } else { Write-Output 'NPM_NOT_FOUND' } ; if (Get-Command node -ErrorAction SilentlyContinue) { Get-Command node }",
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Check Node Npm Path 2",
+			"type": "shell",
+			"command": "node --version; if (Get-Command npm -ErrorAction SilentlyContinue) { Get-Command npm } else { Write-Output 'NPM_NOT_FOUND' } ; if (Get-Command node -ErrorAction SilentlyContinue) { Get-Command node }",
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Locate Node Install",
+			"type": "shell",
+			"command": "if (Test-Path 'C:\\Program Files\\nodejs') { Get-ChildItem 'C:\\Program Files\\nodejs' -Filter node.exe -Recurse | Select-Object FullName } else { Write-Output 'NODE_NOT_IN_PROGRAM_FILES' }",
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Check NPM Existence",
+			"type": "shell",
+			"command": "if (Test-Path 'C:\\Program Files\\nodejs\\npm.cmd') { Write-Output 'NPM_FOUND'; & 'C:\\Program Files\\nodejs\\npm.cmd' --version } else { Write-Output 'NPM_NOT_FOUND' }",
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Install Dependencies Explicit",
+			"type": "shell",
+			"command": "& 'C:\\Program Files\\nodejs\\npm.cmd' install",
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Install Dependencies With Node Path",
+			"type": "shell",
+			"command": "$env:PATH = 'C:\\Program Files\\nodejs;' + $env:PATH; & 'C:\\Program Files\\nodejs\\npm.cmd' install",
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Build App",
+			"type": "shell",
+			"command": "$env:PATH = 'C:\\Program Files\\nodejs;' + $env:PATH; & 'C:\\Program Files\\nodejs\\npm.cmd' run build",
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Build App Fix Entry",
+			"type": "shell",
+			"command": "$env:PATH = 'C:\\Program Files\\nodejs;' + $env:PATH; & 'C:\\Program Files\\nodejs\\npm.cmd' run build",
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Build App Final",
+			"type": "shell",
+			"command": "$env:PATH = 'C:\\Program Files\\nodejs;' + $env:PATH; & 'C:\\Program Files\\nodejs\\npm.cmd' run build",
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Build App Final 2",
+			"type": "shell",
+			"command": "$env:PATH = 'C:\\Program Files\\nodejs;' + $env:PATH; & 'C:\\Program Files\\nodejs\\npm.cmd' run build",
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Run Dev Server",
+			"type": "shell",
+			"command": "$env:PATH = 'C:\\Program Files\\nodejs;' + $env:PATH; & 'C:\\Program Files\\nodejs\\npm.cmd' run dev -- --host 0.0.0.0",
+			"isBackground": true,
+			"problemMatcher": []
+		},
+		{
+			"label": "Run Responsive Frontend App",
+			"type": "shell",
+			"command": "$env:PATH = 'C:\\Program Files\\nodejs;' + $env:PATH; & 'C:\\Program Files\\nodejs\\npm.cmd' run dev -- --host 0.0.0.0",
+			"isBackground": true,
+			"problemMatcher": []
+		}
+	]
+}

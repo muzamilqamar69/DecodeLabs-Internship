@@ -1,0 +1,42 @@
+:root {
+  font-size: 16px;
+}
+
+@media (max-width: 425px) {
+  .navbar,
+  .hero-section,
+  .features-section,
+  .info-section,
+  .stats-section,
+  .cta-section,
+  .site-footer {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media (min-width: 640px) {
+  .app-shell {
+    padding-top: 5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .site-header {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media (min-width: 1440px) {
+  :root {
+    font-size: 17px;
+  }
+}

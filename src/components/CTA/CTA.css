@@ -1,0 +1,47 @@
+.cta-section {
+  padding: 3.5rem 1.25rem 5rem;
+  background: linear-gradient(135deg, #eff7ff 0%, #f8fafc 100%);
+}
+
+.cta-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: flex-start;
+  justify-content: space-between;
+  background: linear-gradient(180deg, #ffffff 0%, #eff6ff 100%);
+  padding: 2rem;
+  border-radius: 32px;
+  border: 1px solid rgba(37, 99, 235, 0.12);
+  box-shadow: 0 30px 68px rgba(15, 23, 42, 0.08);
+}
+
+.cta-card .eyebrow {
+  display: inline-flex;
+  color: var(--primary);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.cta-card h2 {
+  margin: 0.85rem 0 1rem;
+  font-size: clamp(2rem, 2.8vw, 2.6rem);
+  line-height: 1.08;
+  color: var(--text-dark);
+}
+
+.cta-card p {
+  margin: 0;
+  color: var(--muted);
+  max-width: 42rem;
+  line-height: 1.9;
+}
+
+@media (min-width: 768px) {
+  .cta-card {
+    flex-direction: row;
+    align-items: center;
+  }
+}

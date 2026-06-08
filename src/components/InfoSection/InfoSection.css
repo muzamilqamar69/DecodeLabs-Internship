@@ -1,0 +1,71 @@
+.info-section {
+  padding: 3.5rem 1.25rem;
+}
+
+.info-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.info-copy {
+  max-width: 42rem;
+}
+
+.info-section .eyebrow {
+  color: var(--primary);
+  letter-spacing: 0.12em;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.92rem;
+}
+
+.info-section h2 {
+  margin: 1rem 0 1.25rem;
+  font-size: clamp(2rem, 2.5vw, 2.75rem);
+  color: var(--text-dark);
+  line-height: 1.08;
+}
+
+.info-section p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.9;
+  font-size: 1rem;
+}
+
+.info-list {
+  margin: 2rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 1rem;
+}
+
+.info-list li {
+  position: relative;
+  padding-left: 2.2rem;
+  color: var(--text-dark);
+  line-height: 1.8;
+}
+
+.info-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  top: 0.15rem;
+  color: var(--primary);
+  font-size: 1rem;
+}
+
+.info-media img {
+  width: 100%;
+  border-radius: 32px;
+  box-shadow: 0 28px 64px rgba(15, 23, 42, 0.09);
+}
+
+@media (min-width: 768px) {
+  .info-grid {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+}
